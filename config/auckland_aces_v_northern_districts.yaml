@@ -1,0 +1,25 @@
+name: 'auckland_aces_v_northern_districts'
+fps: 30
+ref_frame:
+    time_of_ref: 300 
+    window_len: 10
+    ref_frame_loc: './images/ref_frames/'
+video:
+    start_time: 1860
+    end_time: 28039
+files:
+    csv_loc: './files/auckland_aces_v_northern_districts/'
+    json_loc: './files/auckland_aces_v_northern_districts/'
+    metadata_loc: './files/auckland_aces_v_northern_districts/'
+    image_loc: './images/auckland_aces_v_northern_districts/'
+overs_image:
+    img_per_combine: 240
+    img_per_horizontal: 12
+    skip_frame: 30
+    threshold: 47
+
+### ref: 163000
+## x: 69
+## y: 321
+## w: 83
+## h: 21

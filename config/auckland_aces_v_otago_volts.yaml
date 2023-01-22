@@ -1,0 +1,25 @@
+name: 'auckland_aces_v_otago_volts'
+fps: 30
+ref_frame:
+    time_of_ref: 300 
+    window_len: 10
+    ref_frame_loc: './images/ref_frames/'
+video:
+    start_time: 240
+    end_time: 26830
+files:
+    csv_loc: './files/auckland_aces_v_otago_volts/'
+    json_loc: './files/auckland_aces_v_otago_volts/'
+    metadata_loc: './files/auckland_aces_v_otago_volts/'
+    image_loc: './images/auckland_aces_v_otago_volts/'
+overs_image:
+    img_per_combine: 240
+    img_per_horizontal: 12
+    skip_frame: 30
+    threshold: 47
+
+### ref: 163000
+## x: 69
+## y: 321
+## w: 83
+## h: 21

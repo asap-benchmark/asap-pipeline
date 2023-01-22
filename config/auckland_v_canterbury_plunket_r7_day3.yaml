@@ -1,0 +1,25 @@
+name: 'auckland_v_canterbury_plunket_r7_day3'
+fps: 30
+ref_frame:
+    time_of_ref: 300 
+    window_len: 10
+    ref_frame_loc: './images/ref_frames/'
+video:
+    start_time: 1020
+    end_time: 28680
+files:
+    csv_loc: './files/auckland_v_canterbury_plunket_r7_day3/'
+    json_loc: './files/auckland_v_canterbury_plunket_r7_day3/'
+    metadata_loc: './files/auckland_v_canterbury_plunket_r7_day3/'
+    image_loc: './images/auckland_v_canterbury_plunket_r7_day3/'
+overs_image:
+    img_per_combine: 240
+    img_per_horizontal: 12
+    skip_frame: 30
+    threshold: 47
+
+### ref: 163000
+## x: 69
+## y: 321
+## w: 87
+## h: 21

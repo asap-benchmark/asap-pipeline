@@ -1,0 +1,25 @@
+name: '2019_WC_final_Eng_vs_NZ'
+fps: 25
+ref_frame:
+    time_of_ref: 300 
+    window_len: 10
+    ref_frame_loc: './images/ref_frames/'
+video:
+    start_time: 90
+    end_time: 27534
+files:
+    csv_loc: './files/2019_WC_final_Eng_vs_NZ/'
+    json_loc: './files/2019_WC_final_Eng_vs_NZ/'
+    metadata_loc: './files/2019_WC_final_Eng_vs_NZ/'
+    image_loc: './images/2019_WC_final_Eng_vs_NZ/'
+overs_image:
+    img_per_combine: 240
+    img_per_horizontal: 12
+    skip_frame: 30
+    threshold: 50
+
+### ref: 34000
+## x: 365
+## y: 315
+## w: 23
+## h: 11

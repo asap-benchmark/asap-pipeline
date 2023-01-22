@@ -1,0 +1,25 @@
+name: 'northern_v_wellington_plunket_r6_day4'
+fps: 30
+ref_frame:
+    time_of_ref: 300 
+    window_len: 10
+    ref_frame_loc: './images/ref_frames/'
+video:
+    start_time: 15570
+    end_time: 28620
+files:
+    csv_loc: './files/northern_v_wellington_plunket_r6_day4/'
+    json_loc: './files/northern_v_wellington_plunket_r6_day4/'
+    metadata_loc: './files/northern_v_wellington_plunket_r6_day4/'
+    image_loc: './images/northern_v_wellington_plunket_r6_day4/'
+overs_image:
+    img_per_combine: 240
+    img_per_horizontal: 12
+    skip_frame: 30
+    threshold: 47
+
+### ref: 163000
+## x: 69
+## y: 321
+## w: 87
+## h: 21
