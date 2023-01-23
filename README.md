@@ -1,8 +1,10 @@
 # Building Scalable Video Understanding Benchmarks through Sports
-Implementation of the ASAP pipeline for cricket match videos.
+Implementation of the ASAP pipeline for sports videos. 
+
+<img src='./resources/asap.gif'>
 
 ## Usage
-To use the ASAP framework on Cricket Videos
+For usage of this pipeline, first please 
 
 
 ## Adapting to other sports
