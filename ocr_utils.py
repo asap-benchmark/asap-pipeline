@@ -61,18 +61,6 @@ def get_overs_position (texts):
         else:
             i+=1
 
-    # for text in texts:
-    #     x, y, sz = 0,0,0
-    #     for vertex in text.bounding_poly.vertices:
-    #         x += vertex.x
-    #         y += vertex.y
-    #         sz += 1
-    #     x /= sz
-    #     y /= sz
-    #     desc = re_decimal.sub('', text.description)
-    #     if (desc != ''):
-    #         positions.append((x,y,desc))
-    # print(positions)
     return positions
 
 def get_new_overs_position(texts):
@@ -111,33 +99,9 @@ def get_new_overs_position(texts):
                 i+=2
         else:
             i+=1
-    # for text in texts:
-    #     x, y, sz = 0,0,0
-    #     for vertex in text.bounding_poly.vertices:
-    #         x += vertex.x
-    #         y += vertex.y
-    #         sz += 1
-    #     x /= sz
-    #     y /= sz
-    #     desc = re_decimal.sub('', text.description)
-    #     if (desc != ''):
-    #         positions.append((x,y,desc))
-    # # print(positions)
     return positions
         
 
-# def position_to_index (bounding_boxes, width, height, img_per_row, img_per_col, cmpid):
-#     """ Return index in image corresponding to bounding boxes """
-#     indices = []
-#     for box in bounding_boxes:
-#         x,y,text = box
-#         i = np.floor (x / (width / img_per_row)).astype(int)
-#         j = np.floor (y / (height / img_per_col)).astype(int)
-#         indices.append((cmpid, j, i, text))
-#     # sort indices by row index
-#     indices = sorted(indices, key=lambda tup: (tup[0],tup[1],tup[2]))
-#     print(indices)
-#     return indices
 
 def position_to_index (bounding_boxes, width, height, img_per_row, img_per_col, cmpid):
     """ Return index in image corresponding to bounding boxes """

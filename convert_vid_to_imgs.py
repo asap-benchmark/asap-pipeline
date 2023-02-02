@@ -6,18 +6,11 @@ import yaml
 import sys
 from yaml.loader import SafeLoader
 
-# match = 'IPL2017 M2.avi'
-# file_location = os.path.join('../ipl2017', match)
-# print("file exists?", os.path.exists(file_location))
 
 def vids_to_imgs(cfg):
 
-    ### For M1: 299, 10, 40
-    ### For M2: 355, 10, 40
-    # x, y = 280, 330
-    # w, h = 80, 10
     match = cfg['name']
-    file_location = os.path.join('../new_new_vids', match+'.mp4')
+    file_location = os.path.join('./videos', match+'.mp4')
     if os.path.exists(file_location):
         print('The match ', match, ' file exists!!')
     else:
@@ -41,11 +34,7 @@ def vids_to_imgs(cfg):
     image_loc = cfg['files']['image_loc']
     json_loc = cfg['files']['json_loc']
     metadata_loc = cfg['files']['metadata_loc']
-    is_highlight = True
-    # is_highlight = cfg['files']['highlight']
-    # output_csv_file = './files/run1o'
-    # json_file = './files/run1.json'
-    # csv_location = './files/'
+
 
     timestamp_info, list_framenum, H, W = video_utils.process_avi_pixels(file_location, time_of_ref = time_of_ref, 
             window_len=window_len, images_per_combine=img_per_combine, images_per_horizontal=img_per_horizontal,
@@ -55,14 +44,15 @@ def vids_to_imgs(cfg):
     video_utils.save_csv(timestamp_info, list_framenum, img_per_combine, csv_loc)
 
     timestamps_0, timestamps_1 = ocr_utils.ocr_to_json(image_loc, json_loc, metadata_loc, csv_loc, height=H, 
-             width=W, is_highlight=is_highlight, img_per_row=img_per_horizontal, img_per_col = (img_per_combine // img_per_horizontal))
+             width=W, is_highlight=True, img_per_row=img_per_horizontal, img_per_col = (img_per_combine // img_per_horizontal))
 
 
 
 if __name__ == "__main__":
-    loc = './config/IPL2017_M1.yaml'
-    with open(loc) as f:
-        cfg = yaml.safe_load(f)
+    # loc = './config/auckland_aces_v_central_stags.yaml'
+    # with open(loc) as f:
+    #     cfg = yaml.safe_load(f)
         # cfg = yaml.load(f, Loader = yaml.FullLoader)
     # print(cfg)
-    vids_to_imgs(cfg)
+    # vids_to_imgs(cfg)
+    pass

@@ -75,6 +75,8 @@ def main(cfg):
     rem_end = []
     lost_balls = []
     
+    
+    ### For first innings
     for i in match0.keys():
         print(i)
         if i in scraped_0.keys():
@@ -100,41 +102,38 @@ def main(cfg):
             batter.append(scraped_0[i]['batter'])
             # comm.append(scraped_0[i]['comm'])   ### CHANGE WHEN FULL COMMENTARY
     
-    for i in range(len(all_balls)):
-        if all_balls[i] not in temp_overs:
-            lost_balls.append(all_balls[i])
-    
     temp_overs = []
     
-    # for i in match1.keys():
-    #     print(i)
-    #     if i in scraped_1.keys():
-    #         start_sec = int(round(match1[i]['start'], 0))
-    #         start_secs.append(start_sec)
-    #         start.append(time.strftime("%H:%M:%S", time.gmtime(start_sec)))
-    #         start_frame.append(match1[i]['start_frame'])
-    #         end_sec = int(round(match1[i]['end'], 0))
-    #         end_secs.append(end_sec)
-    #         end.append(time.strftime("%H:%M:%S", time.gmtime(end_sec)))
-    #         end_frame.append(match1[i]['end_frame'])
 
-    #         rem_start.append(end_sec)
-    #         rem_end.append(end_sec+1)
+    ### For second innings
+    for i in match1.keys():
+        print(i)
+        if i in scraped_1.keys():
+            start_sec = int(round(match1[i]['start'], 0))
+            start_secs.append(start_sec)
+            start.append(time.strftime("%H:%M:%S", time.gmtime(start_sec)))
+            start_frame.append(match1[i]['start_frame'])
+            end_sec = int(round(match1[i]['end'], 0))
+            end_secs.append(end_sec)
+            end.append(time.strftime("%H:%M:%S", time.gmtime(end_sec)))
+            end_frame.append(match1[i]['end_frame'])
 
-    #         start_ms.append('000')
-    #         end_ms.append('000')
+            rem_start.append(end_sec)
+            rem_end.append(end_sec+1)
+
+            start_ms.append('000')
+            end_ms.append('000')
             
-    #         temp_overs.append(i)
-    #         overs.append(i)
-    #         run.append(scraped_1[i]['run'])
-    #         bowler.append(scraped_1[i]['bowler'])
-    #         batter.append(scraped_1[i]['batter'])
-    #         # comm.append(scraped_1[i]['comm'])     ### CHANGE WHEN FULL COMMENTARY
+            temp_overs.append(i)
+            overs.append(i)
+            run.append(scraped_1[i]['run'])
+            bowler.append(scraped_1[i]['bowler'])
+            batter.append(scraped_1[i]['batter'])
+            # comm.append(scraped_1[i]['comm'])     ### CHANGE WHEN FULL COMMENTARY
 
-    # for i in range(len(all_balls)):
-    #     if all_balls[i] not in temp_overs:
-    #         lost_balls.append(all_balls[i])
 
+
+    #### code snippet for saving some video clips
     # video_loc = '../ipl2017/' + cfg['name'] + '.mp4'
     # for i in range(len(start_secs)):
     #     loc = './snippets/' + cfg['name'] + '/' + str(i) + '/'
@@ -178,7 +177,7 @@ def main(cfg):
 
 
 if __name__ == "__main__":
-    loc = './config/canterbury_v_auckland_plunket_new_day1.yaml'
+    loc = './config/auckland_aces_v_central_stags.yaml'
     with open(loc) as f:
         cfg = yaml.safe_load(f)
         # cfg = yaml.load(f, Loader = yaml.FullLoader)

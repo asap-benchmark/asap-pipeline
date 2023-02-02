@@ -18,38 +18,6 @@ def pixel_distance(img1, img2):
     return np.sum(np.absolute(np.subtract(img1.flatten(), 
         img2.flatten())))
 
-# def pixel_distance(img1, img2):
-#     '''
-#     Get the histogram of an image. For an 8-bit, grayscale image, the
-#     histogram will be a 256 unit vector in which the nth value indicates
-#     the percent of the pixels in the image with the given darkness level.
-#     The histogram's values sum to 1.
-#     '''
-#     # img1 = img1.astype(np.int16)
-#     # img2 = img2.astype(np.int16)
-
-#     bw_image_1 = cv2.cvtColor(img1, cv2.COLOR_BGR2GRAY)
-#     bw_image_2 = cv2.cvtColor(img2, cv2.COLOR_BGR2GRAY)
-
-#     return np.absolute(np.sum(bw_image_1) - np.sum(bw_image_2))
-
-# def pixel_distance(img1, img2):
-#     '''
-#     Get the histogram of an image. For an 8-bit, grayscale image, the
-#     histogram will be a 256 unit vector in which the nth value indicates
-#     the percent of the pixels in the image with the given darkness level.
-#     The histogram's values sum to 1.
-#     '''
-#     # img1 = img1.astype(np.int16)
-#     # img2 = img2.astype(np.int16)
-
-#     bw_image_1 = cv2.cvtColor(img1, cv2.COLOR_BGR2GRAY)
-#     bw_image_2 = cv2.cvtColor(img2, cv2.COLOR_BGR2GRAY)
-
-#     black_pix_1 = np.sum(bw_image_1 < 75)
-#     black_pix_2 = np.sum(bw_image_2 < 75)
-#     return np.absolute(black_pix_1 - black_pix_2)
-
 
 # function for taking frames from video and combining into video to save # images sent to OCR
 def combine_images(images, num_images: int, num_horizontal: int):
@@ -93,6 +61,8 @@ def process_avi_pixels(file_location, time_of_ref=200, window_len=10,
     ret, frame = vc.read()
     print(frame.shape)
     vc.set(1, 63900)
+
+    ### For cricket matches
     x = 69
     y = 321
     w = 87
@@ -232,23 +202,6 @@ def process_avi_pixels(file_location, time_of_ref=200, window_len=10,
     vc.release()
     return list_timestamps, all_framenum_li, new_image.shape[0], new_image.shape[1]
 
-
-# function for converting video into frames of images using pixel coordinates for crop
-# input is based on ratios instead of raw pixel coords
-# def process_avi_pixels_ratios(file_location, img_width, img_height, x, y, w, h, images_per_combine:int=64, 
-#     images_per_horizontal:int=8, seconds_of_interest=None, skip=120,
-#     fps=25, save_images=False, name='ipl'):
-
-#     assert x <= 1 and x >= 0 and y <= 1 and y >= 0 and w <= 1 and w >= 0 and h <= 1 and h >= 0
-#     assert x+w <= 1 and x+w >= 0 and y+h <= 1 and y+h >= 0
-
-#     a_x = math.ceil(img_width * x)
-#     a_y = math.ceil(img_height * y)
-#     a_w = math.ceil(img_width * w)
-#     a_h = math.ceil(img_height * h)
-
-#     process_avi_pixels(file_location, a_x, a_y, a_w, a_h, images_per_combine, images_per_horizontal,
-#     seconds_of_interest, skip, fps, save_images, name)
 
 def save_csv(list_of_timestamps, list_framenum, img_per_comp, name):
     '''
