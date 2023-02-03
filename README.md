@@ -6,6 +6,8 @@ Implementation of the ASAP pipeline for sports videos.
 ## Usage
 For usage of this pipeline, first please install the [Google Vision API](https://cloud.google.com/vision) in your local env.
 
+Please also install selenium and chromedriver in your system for scraping the web commentary. You can use the tutorial for this from [here](https://www.geeksforgeeks.org/how-to-install-selenium-tools-on-linux/)
+
 Firstly, scrape through the cricinfo website using `scrape_espn.ipynb` and follow the instructions specified there. For generating LCric, we use [ESPNCricinfo](https://www.espncricinfo.com/).
 
 Next, please place the match videos directory. The overall directory structure can be seen as follows:
