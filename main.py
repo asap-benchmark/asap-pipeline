@@ -14,27 +14,7 @@ import time
 from create_annotations import get_ann
 from moviepy.video.io.ffmpeg_tools import ffmpeg_extract_subclip
 
-# from deeptext_ocr import draw_utils
-# file_name = os.path.abspath('IPL2017 M2_0.jpg')
 
-# The name of the image file to annotate
-# name = 'IPL2017 M2_0'
-# file_name = name + '.jpg'
-# input_folder = './images'
-# output_folder = './images'
-
-# image_cv2 = cv2.imread(os.path.join(input_folder, file_name))
-# response = ocr_utils.extract_text(os.path.join(input_folder, file_name))
-# texts = response.text_annotations
-
-# print('Texts:')    
-# for text in texts:        
-#     print('\n"{}"'.format(text.description))        
-#     vertices = (['({},{})'.format(vertex.x, vertex.y)                    
-#                 for vertex in text.bounding_poly.vertices])        
-#     # print('bounds: {}'.format(','.join(vertices)))
-    
-# debug_utils.draw_label_image(image_cv2, texts, output_folder, name)
 
 def main(cfg):
     ### Getting the timestamp for all overs present in our match
@@ -75,7 +55,7 @@ def main(cfg):
     rem_end = []
     lost_balls = []
     
-    
+
     ### For first innings
     for i in match0.keys():
         print(i)
@@ -132,26 +112,6 @@ def main(cfg):
             # comm.append(scraped_1[i]['comm'])     ### CHANGE WHEN FULL COMMENTARY
 
 
-
-    #### code snippet for saving some video clips
-    # video_loc = '../ipl2017/' + cfg['name'] + '.mp4'
-    # for i in range(len(start_secs)):
-    #     loc = './snippets/' + cfg['name'] + '/' + str(i) + '/'
-    #     if not os.path.exists(loc):
-    #         os.makedirs(loc)
-        
-    #     target_vid_name = loc + 'snippet.mp4'
-    #     extra = loc + 'extra.mp4'
-    #     target_file_name = loc + 'annotation.txt'
-    #     ffmpeg_extract_subclip(video_loc, start_secs[i], end_secs[i], targetname= target_vid_name)
-    #     ffmpeg_extract_subclip(video_loc, rem_start[i], rem_end[i], targetname= extra)
-
-    #     with open(target_file_name, 'w') as f:
-    #         print("Over: %s\nRun: %s\nBowler: %s\nBatter: %s\n" % (
-    #             overs[i], run[i], bowler[i], batter[i]), file=f)   ### comm[i]
-
-    # with open(csv_loc + 'missing_balls.txt', 'w') as f:
-    #     f.write(str(lost_balls))
 
     # print(cfg['name'])
     annotations = get_ann(overs, run, start_frame, end_frame, bowler, batter, cfg)
