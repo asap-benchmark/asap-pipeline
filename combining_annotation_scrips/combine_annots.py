@@ -20,13 +20,11 @@ import re
 total_incorrect_order = 0
 total_time_over = 0
 
-# move somewhere else, stringify list of lists
 def stringify (lst):
     if len(lst) < 1:
         return []
 
     event_chains,event_chains_final = [],[]
-    # form all possible combinations of event chains
     for event in lst[0]:
         event_chains.append([event])
 
@@ -37,12 +35,6 @@ def stringify (lst):
                 event_chains_final.append(chain + [event])
         event_chains = event_chains_final
 
-    # reuse variable to return event chain keys
-    # event_chains = []
-    # for i in range(len(event_chains_final)):
-    #     event_chains_final[i].sort()
-
-    # print(event_chains_final)
     
     for chains in event_chains_final:
         key = ""
@@ -156,10 +148,6 @@ def combine_ann_overs (annotations, combine_len: int, all_queries=None):
 
     combined_annots = []
 
-
-    # if all_queries!=None:
-    #     all_query_keys = list(all_queries.keys())
-    #     query_dict = dict.fromkeys(all_query_keys)
 
     i = 0
     # quite inefficient, but for purposes of density param, this will do.

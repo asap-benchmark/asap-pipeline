@@ -14,23 +14,6 @@ import time
 import re
 
 
-# def get_num_run(run):
-#     runs = run.split()
-#     if len(runs)>1:
-#         num = 0
-#         for i in range(len(runs)):
-#             if runs[i] == '•':
-#                 num += 0
-#                 continue
-
-#             if 'w' in runs[i]:
-#                 wide = 1
-#             elif 'W' in runs[i]:
-#                 bowled = 1
-            
-#             temp = re.sub('\D', '', runs[i])
-#             num += int(temp)
-
 
 def get_ann(overs, run, start_frame, end_frame, bowler, batter, cfg, num_balls = 1):
     annotations = []

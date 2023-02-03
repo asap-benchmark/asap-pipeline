@@ -258,17 +258,6 @@ def get_ann_chain_stats_and_or(match_annotations, chain_len, num_overs, op= 'atl
                                 stats[j+1][key] = 1
                             else:
                                 stats[j+1][key] += 1
-                    # if res is not None:
-                    #     key = ' '.join(option)
-                    #     if key not in stats[0]:
-                    #         stats[0][key] = 1
-                    #         stats[j+1][key] = 1
-                    #     else: 
-                    #         stats[0][key] += 1
-                    #         if key not in stats[j+1]:
-                    #             stats[j+1][key] = 1
-                    #         else:
-                    #             stats[j+1][key] += 1
             i += 1
             k += 1
 
@@ -345,17 +334,6 @@ def get_ann_chain_stats_and_or_multi(match_annotations, chain_len, num_overs, op
                                 stats[j+1][key] = 1
                             else:
                                 stats[j+1][key] += 1
-                    # if res is not None:
-                    #     key = ' '.join(option)
-                    #     if key not in stats[0]:
-                    #         stats[0][key] = 1
-                    #         stats[j+1][key] = 1
-                    #     else: 
-                    #         stats[0][key] += 1
-                    #         if key not in stats[j+1]:
-                    #             stats[j+1][key] = 1
-                    #         else:
-                    #             stats[j+1][key] += 1
             i += 1
             k += 1
 
@@ -426,17 +404,6 @@ def get_ann_chain_stats_inrange(match_annotations, chain_len, num_overs, op= 'in
                                 stats[j+1][key] = 1
                             else:
                                 stats[j+1][key] += 1
-                    # if res is not None:
-                    #     key = ' '.join(option)
-                    #     if key not in stats[0]:
-                    #         stats[0][key] = 1
-                    #         stats[j+1][key] = 1
-                    #     else: 
-                    #         stats[0][key] += 1
-                    #         if key not in stats[j+1]:
-                    #             stats[j+1][key] = 1
-                    #         else:
-                    #             stats[j+1][key] += 1
             i += 1
             k += 1
 
