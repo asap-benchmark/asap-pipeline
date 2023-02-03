@@ -1,7 +1,7 @@
 # Building Scalable Video Understanding Benchmarks through Sports
 Implementation of the ASAP pipeline for sports videos. 
 
-<img src='./resources/asap.gif'>
+![ASAP Pipeline](./resources/asap.gif)
 
 ## Usage
 For usage of this pipeline, first please install the [Google Vision API](https://cloud.google.com/vision) in your local env.
