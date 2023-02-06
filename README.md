@@ -1,5 +1,5 @@
 # Building Scalable Video Understanding Benchmarks through Sports
-Implementation of the ASAP pipeline for sports videos. 
+Implementation of the ASAP pipeline for sports videos. Official codebase for the paper [Building Scalable Video Understanding Benchmarks through Sports](https://arxiv.org/abs/2301.06866).
 
 ![ASAP Pipeline](./resources/asap.gif)
 
@@ -45,3 +45,19 @@ python main.py
 - [x] Release the pipeline for creation of LCric Dataset.
 - [ ] Release the pipeline for creation of sports like Football, Baseball, Basketball.
 - [ ] Make the pipeline more generalizable, usage of a single pipeline for these 4 sports.
+
+
+## Citation
+
+If you use this code etc., please cite the following paper:
+
+```
+@article{agarwal2023building,
+  title={Building Scalable Video Understanding Benchmarks through Sports},
+  author={Agarwal, Aniket and Zhang, Alex and Narasimhan, Karthik and Gilitschenski, Igor and Murahari, Vishvak and Kant, Yash},
+  journal={arXiv preprint arXiv:2301.06866},
+  year={2023}
+}
+```
+
+If you have any question, please contact aagarwal@ma.iitr.ac.in .
