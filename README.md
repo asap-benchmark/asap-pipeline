@@ -4,7 +4,8 @@ Implementation of the ASAP pipeline for sports videos. Official codebase for the
 ![ASAP Pipeline](./resources/asap.gif)
 
 ## Usage
-For usage of this pipeline, first please install the [Google Vision API](https://cloud.google.com/vision) in your local env.
+
+The pipeline is run on Python 3.8. For usage of this pipeline, first please install the [Google Vision API](https://cloud.google.com/vision) in your local env.
 
 Please also install selenium and chromedriver in your system for scraping the web commentary. You can use the tutorial for this from [here](https://www.geeksforgeeks.org/how-to-install-selenium-tools-on-linux/)
 
